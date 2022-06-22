@@ -1,13 +1,29 @@
 
-    var counter = 50;
-setInterval(function(e){
-    if(counter >= 0){
-        document.querySelector("#counter").innerText = 'blast off in ' + counter;
-        counter -= 10
-        console.log(document.querySelector("#counter").innerText)
-        console.log(counter)
+function play() {
+    var die1 =Math.ceil(Math.random()*6);
+    
+    
+    var die2 =Math.ceil(Math.random()*6);
+    
+    
+    
+    var sum = die1+die2
+    document.write("Die 1 = " + die1)
+    document.write("<br/>")
+    document.write("Die 2 = " + die2)
+    document.write("<br/>")
+    document.write("Sum = " + sum)
+    document.write("<br/>")
+    if (sum == 7 || sum == 11)
+    { document.write("CRAPS - you lose")
+    document.write("<br/>")
     }
-    if(counter < 0){
-        alert('blasssssst off')
+    else if (die1== die2 && die1%2 == 0)
+    {
+    document.write("DOUBLES - you win")
+    document.write("<br/>")
     }
-},1000)
+    
+    }
+
+    play()

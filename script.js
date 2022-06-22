@@ -1,17 +1,13 @@
-var counter = 50
-var timer = setInterval(function(){
-    counter -= 5;
-    document.querySelector("#counter").textContent = counter + ' seconds till launch';
-    if(counter < 0){
-        clearInterval(timer)
-        alert("blast off")
-    }
-    if(counter < 25){
-        document.querySelector("#warning").textContent = 'warning, less then haflway to blast off'
-    }
-},300)
 
-
-/*unrelated function example */
-
-// important queries
+    var counter = 50;
+    setInterval(function(e){
+        if(counter >= 0){
+            document.querySelector("#counter").innerText = 'blast off in ' + counter;
+            counter -= 10
+            console.log(document.querySelector("#counter").innerText)
+            console.log(counter)
+        }
+        if(counter < 0){
+            //alert('blasssssst off')
+        }
+    },1000)\
